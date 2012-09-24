@@ -28,6 +28,7 @@ module OmniAuth
         {
           'id' => raw_info['id'],
           'name' => raw_info['name'],
+          'email' => email,
           'first_name' => raw_info['first_name'],
           'last_name' => raw_info['last_name'],
           'gender' => raw_info['gender'],
@@ -47,6 +48,10 @@ module OmniAuth
       def raw_info
         request = 'https://apis.live.net/v5.0/me'
         @raw_info ||= MultiJson.decode(access_token.get(request).body)
+      end
+
+      def email
+        raw_info['emails'] ? raw_info['emails']['account'] : nil
       end
 
     end
