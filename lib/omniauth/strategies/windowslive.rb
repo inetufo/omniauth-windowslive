@@ -11,8 +11,8 @@ module OmniAuth
 
       option :client_options, {
         :site => 'https://oauth.live.com',
-        :authorize_url => '/authorize',
-        :token_url => '/token'
+        :authorize_url => '/oauth20_authorize.srf',
+        :token_url => '/oauth20_token.srf'
       }
 
       option :authorize_params, {
