@@ -10,7 +10,7 @@ module OmniAuth
       DEFAULT_SCOPE = 'wl.basic,wl.emails,wl.photos'
 
       option :client_options, {
-        :site => 'https://oauth.live.com',
+        :site => 'https://login.live.com',
         :authorize_url => '/oauth20_authorize.srf',
         :token_url => '/oauth20_token.srf'
       }
